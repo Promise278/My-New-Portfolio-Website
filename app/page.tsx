@@ -5,6 +5,7 @@ import Footer from './components/footer';
 import ContactForm from './components/contactform';
 import SkillSection from './components/skillsection';
 import ProjectSection from './components/projectsection';
+import AboutPage from './components/aboutme';
 
 
 
@@ -18,6 +19,7 @@ const Portfolio = () => {
       </div>
       <Nav />
       <HeroSection />
+      <AboutPage />
       <SkillSection />
       <ProjectSection />
       <ContactForm />
