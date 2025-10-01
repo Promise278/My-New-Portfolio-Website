@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import { Download, Code, Smartphone, Award, Coffee, Clock, Heart } from 'lucide-react';
+import Image from "next/image";
 
 function AboutPage() {
     const [isVisible, setIsVisible] = useState({});
@@ -35,15 +36,13 @@ function AboutPage() {
                 {/* Image Container */}
                 <div className="relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm border border-white/10 rounded-2xl p-4 group-hover:border-yellow-400/50 transition-all duration-500">
                   <div className="aspect-square rounded-xl overflow-hidden bg-gradient-to-br from-yellow-400/20 to-amber-500/20 flex items-center justify-center">
-                    {/* Placeholder for actual image */}
-                    <div className="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl flex items-center justify-center text-gray-400">
-                      <div className="text-center">
-                        <div className="w-32 h-32 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                          <span className="text-4xl font-bold text-black">PO</span>
-                        </div>
-                        <p className="text-sm">Your Professional Photo Here</p>
-                      </div>
-                    </div>
+                      <Image
+                        src="/promise.jpeg"
+                        alt="Logo"
+                        width={560}
+                        height={540}
+                        className="rounded-md"
+                      />
                   </div>
                 </div>
 
@@ -70,7 +69,7 @@ function AboutPage() {
                 <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
                   <p>
                     Hello! I'm Promise Obi, a dedicated full-stack developer with over{' '}
-                    <span className="text-yellow-400 font-semibold">5 years of experience</span> crafting 
+                    <span className="text-yellow-400 font-semibold">1 years of experience</span> crafting 
                     digital solutions that make a difference. My journey in tech began with curiosity and has 
                     evolved into a passion for creating seamless, user-centric applications.
                   </p>
@@ -91,9 +90,8 @@ function AboutPage() {
               {/* Stats */}
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
                 {[
-                  { number: '50+', label: 'Projects Completed', icon: Award },
-                  { number: '5+', label: 'Years Experience', icon: Clock },
-                  { number: '100%', label: 'Client Satisfaction', icon: Heart }
+                  { number: '15+', label: 'Projects Completed', icon: Award },
+                  { number: '1+', label: 'Years Experience', icon: Clock },
                 ].map((stat, index) => (
                   <div
                     key={stat.label}

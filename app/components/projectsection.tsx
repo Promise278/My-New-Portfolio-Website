@@ -16,32 +16,32 @@ function ProjectSection() {
 
     const projects = [
       {
-        title: "Tradenest Marketplace",
-        description: "A comprehensive e-commerce platform with real-time inventory management, secure payment processing, and advanced analytics dashboard.",
-        tech: ["Next.js", "Node.js", "MongoDB", "Stripe API"],
-        type: "Full-Stack",
-        link: "#"
-      },
-      {
-        title: "Task Management App",
-        description: "Mobile-first task management application with offline synchronization, push notifications, and collaborative features.",
-        tech: ["React Native", "Expo", "Firebase", "Redux"],
-        type: "Mobile",
-        link: "#"
-      },
-      {
-        title: "Portfolio Dashboard",
-        description: "Modern responsive dashboard with data visualization, real-time updates, and dark/light theme support.",
-        tech: ["React", "TypeScript", "Chart.js", "Tailwind"],
+        title: "Emart",
+        description: "A comprehensive e-commerce platform where users buy products.",
+        tech: ["React", "Javascript", "Tailwindcss"],
         type: "Frontend",
-        link: "#"
+        link: "https://github.com/Promise278/E-mart"
       },
       {
-        title: "API Gateway Service",
-        description: "Scalable microservices architecture with authentication, rate limiting, and comprehensive logging system.",
-        tech: ["Node.js", "Express", "Docker", "Kubernetes"],
+        title: "Movie Website",
+        description: "A website for movies and featured movies for users to see and watch",
+        tech: ["Nextjs", "Typescript", "Tailwind"],
+        type: "Frontend",
+        link: "https://github.com/Promise278/Movie-Next"
+      },
+      {
+        title: "Jamb-App",
+        description: "build a jamb app that helps user to study well for exams",
+        tech: ["ReactNative", "Javascript", "NativeWind", "Expo-Cli"],
+        type: "Mobile",
+        link: "https://github.com/Promise278/Jamb-app"
+      },
+      {
+        title: "TODO Server",
+        description: "these is a todo that has endpoints for add-todo, seealltodo, register, login, delete, pastdate, seealluser.",
+        tech: ["Node.js", "Express", "Bycrpt"],
         type: "Backend",
-        link: "#"
+        link: "https://github.com/Promise278/Todo-Server"
       }
     ];
     
@@ -77,6 +77,8 @@ function ProjectSection() {
                     </span>
                     <a
                       href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="p-2 rounded-full bg-white/5 hover:bg-yellow-400/20 hover:text-yellow-400 transition-all duration-300 group-hover:scale-110"
                     >
                       <ExternalLink className="w-5 h-5" />

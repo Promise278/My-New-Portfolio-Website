@@ -18,7 +18,7 @@ function Footer() {
               <a
                 href="https://github.com/Promise278"
                 target="_blank"
-                // rel="noopener noreferrer"
+                rel="noopener noreferrer"
                 className="p-3 rounded-full cursor-pointer bg-white/5 hover:bg-yellow-400/20 hover:text-yellow-400 transition-all duration-300 group"
               >
                 <Github className="w-6 h-6 cursor-pointer group-hover:scale-110 transition-transform duration-300" />
@@ -26,7 +26,7 @@ function Footer() {
               <a
                 href="https://www.linkedin.com/in/promise-obi-9a6878328/"
                 target="_blank"
-                // rel="noopener noreferrer"
+                rel="noopener noreferrer"
                 className="p-3 rounded-full bg-white/5 hover:bg-yellow-400/20 hover:text-yellow-400 transition-all duration-300 group"
               >
                 <Linkedin className="w-6 h-6 cursor-pointer group-hover:scale-110 transition-transform duration-300" />

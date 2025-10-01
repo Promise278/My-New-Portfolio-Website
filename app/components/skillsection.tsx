@@ -8,8 +8,8 @@ import "aos/dist/aos.css";
 function SkillSection() {
     const skills = {
         frontend: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'HTML', 'CSS'],
-        backend: ['Node.js', 'Express', 'MongoDB', 'MySQL', 'Docker', 'Kubernetes'],
-        mobile: ['React Native', 'Expo CLI']
+        backend: ['Node.js', 'Express', 'MongoDB', 'MySQL', 'Docker'],
+        mobile: ['React Native', 'Expo CLI', 'NativeWind', 'Typescript / Javascript']
     };
     useEffect(() => {
         AOS.init({
