@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect } from 'react'
-import { Code, Database, Smartphone } from 'lucide-react';
+import { Code, Database, Smartphone, ToolCase, } from 'lucide-react';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -9,7 +9,8 @@ function SkillSection() {
     const skills = {
         frontend: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'HTML', 'CSS'],
         backend: ['Node.js', 'Express', 'MongoDB', 'MySQL', 'Docker'],
-        mobile: ['React Native', 'Expo CLI', 'NativeWind', 'Typescript / Javascript']
+        mobile: ['React Native', 'Expo CLI', 'NativeWind', 'Typescript / Javascript'],
+        tools: ['Docker', 'Git', 'Github', 'Vscode', 'Postman']
     };
     useEffect(() => {
         AOS.init({
@@ -39,7 +40,8 @@ function SkillSection() {
             {[
               { title: 'Frontend Development', icon: Code, skills: skills.frontend, color: 'from-blue-400 to-cyan-400' },
               { title: 'Backend Development', icon: Database, skills: skills.backend, color: 'from-green-400 to-emerald-400' },
-              { title: 'Mobile Development', icon: Smartphone, skills: skills.mobile, color: 'from-purple-400 to-pink-400' }
+              { title: 'Mobile Development', icon: Smartphone, skills: skills.mobile, color: 'from-purple-400 to-pink-400' },
+              { title: 'DevUps & Tools', icon: ToolCase, skills: skills.tools, color: 'from-yellow-300 to-green-400' }
             ].map((category, index) => (
               <div
                 key={category.title}
