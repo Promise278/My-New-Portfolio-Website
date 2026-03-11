@@ -1,137 +1,145 @@
-"use client"
-import React, { useState } from 'react'
-import { Download, Code, Smartphone, Award, Coffee, Clock, Heart } from 'lucide-react';
+"use client";
+import React from "react";
+import {
+  Download,
+  Code,
+  Smartphone,
+  Award,
+  Clock,
+  Coffee,
+  Sparkles,
+} from "lucide-react";
 import Image from "next/image";
 
 function AboutPage() {
-    const [isVisible, setIsVisible] = useState({});
   return (
-    <div>
-       <section id="about" className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-6">
-          <div
-            id="about-header"
-            data-animate
-            className='text-center mb-16 transition-all duration-1000'
-          >
-            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
-              About Me
-            </h2>
-            <p className="text-xl text-gray-400">
-              Get to know the person behind the code
-            </p>
-          </div>
+    <section id="about" className="py-32 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
+          {/* Image Section */}
+          <div className="relative order-2 lg:order-1">
+            <div className="relative group">
+              {/* Animated Glow Backdrops */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Image Section */}
-            <div
-              id="about-image"
-              data-animate
-              className='relative transition-all duration-1000'
-            >
-              <div className="relative group">
-                {/* Background Glow */}
-                <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400/30 to-amber-500/30 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                
-                {/* Image Container */}
-                <div className="relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm border border-white/10 rounded-2xl p-4 group-hover:border-yellow-400/50 transition-all duration-500">
-                  <div className="aspect-square rounded-xl overflow-hidden bg-gradient-to-br from-yellow-400/20 to-amber-500/20 flex items-center justify-center">
-                      <Image
-                        src="/promise.jpeg"
-                        alt="Logo"
-                        width={560}
-                        height={540}
-                        className="rounded-md"
-                      />
+              <div className="relative glass rounded-3xl p-3 overflow-hidden">
+                <div className="aspect-[4/5] rounded-2xl overflow-hidden relative">
+                  <Image
+                    src="/promise.jpeg"
+                    alt="Promise Obi - Full Stack Developer"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  {/* Overlay Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent"></div>
+
+                  {/* Floating Badge */}
+                  <div className="absolute bottom-6 left-6 right-6 glass p-4 rounded-2xl flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center text-black">
+                      <Sparkles className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <p className="text-foreground font-bold text-sm">
+                        Open for Collaboration
+                      </p>
+                      <p className="text-foreground/40 text-xs">
+                        Let's build something great
+                      </p>
+                    </div>
                   </div>
                 </div>
+              </div>
 
-                {/* Floating Elements */}
-                <div className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full flex items-center justify-center animate-pulse">
-                  <Code className="w-6 h-6 text-black" />
-                </div>
-                <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full flex items-center justify-center animate-pulse animation-delay-1000">
-                  <Smartphone className="w-6 h-6 text-black" />
-                </div>
+              {/* Decorative Icons */}
+              <div className="absolute -top-6 -right-6 w-16 h-16 glass rounded-2xl flex items-center justify-center animate-float shadow-2xl">
+                <Code className="w-8 h-8 text-yellow-400" />
+              </div>
+              <div className="absolute top-1/2 -left-8 w-14 h-14 glass rounded-xl flex items-center justify-center animate-float [animation-delay:1.5s] shadow-2xl">
+                <Smartphone className="w-7 h-7 text-accent" />
+              </div>
+            </div>
+          </div>
+
+          {/* Text Content Section */}
+          <div className="space-y-10 order-1 lg:order-2">
+            <div>
+              <h2 className="text-sm font-black tracking-[0.2em] text-yellow-400 uppercase mb-4">
+                The Developer
+              </h2>
+              <h3 className="text-5xl md:text-6xl font-black text-foreground leading-tight mb-8">
+                Turning vision into{" "}
+                <span className="text-gradient">digital reality.</span>
+              </h3>
+
+              <div className="space-y-6 text-lg text-foreground/60 leading-relaxed">
+                <p>
+                  I'm{" "}
+                  <span className="text-foreground font-semibold">
+                    Promise Obi
+                  </span>
+                  , a Nigerian-based software engineer specializing in building
+                  robust, user-centric applications. With a foundation in modern
+                  full-stack architecture, I bridge the gap between complex
+                  backend logic and intuitive frontend experiences.
+                </p>
+                <p>
+                  My philosophy is simple:{" "}
+                  <span className="italic">
+                    code should be as elegant as the problems it solves.
+                  </span>
+                  Whether it's scaling a web platform or crafting a seamless
+                  mobile experience with React Native, I focus on performance,
+                  accessibility, and clean, maintainable code.
+                </p>
               </div>
             </div>
 
-            {/* Content Section */}
-            <div
-              id="about-content"
-              data-animate
-              className='space-y-8 transition-all duration-1000'
-            >
-              <div>
-                <h3 className="text-3xl font-bold mb-6 text-white">
-                  Passionate Developer with a Vision
-                </h3>
-                <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
-                  <p>
-                    Hello! I'm Promise Obi, a dedicated full-stack developer with over{' '}
-                    <span className="text-yellow-400 font-semibold">1 years of experience</span> crafting 
-                    digital solutions that make a difference. My journey in tech began with curiosity and has 
-                    evolved into a passion for creating seamless, user-centric applications.
-                  </p>
-                  <p>
-                    I specialize in building scalable web applications using modern technologies like{' '}
-                    <span className="text-yellow-400 font-semibold">React, Node.js, and React Native</span>. 
-                    My approach combines technical expertise with creative problem-solving to deliver 
-                    exceptional digital experiences.
-                  </p>
-                  <p>
-                    When I'm not coding, you'll find me exploring new technologies, contributing to open-source 
-                    projects, or mentoring aspiring developers. I believe in the power of technology to 
-                    transform lives and businesses.
-                  </p>
-                </div>
-              </div>
-
-              {/* Stats */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-                {[
-                  { number: '15+', label: 'Projects Completed', icon: Award },
-                  { number: '1+', label: 'Years Experience', icon: Clock },
-                ].map((stat, index) => (
-                  <div
-                    key={stat.label}
-                    className="text-center p-4 rounded-xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 hover:border-yellow-400/30 transition-all duration-300 group"
-                  >
-                    <div className="flex justify-center mb-3">
-                      <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <stat.icon className="w-6 h-6 text-black" />
-                      </div>
-                    </div>
-                    <div className="text-2xl font-bold text-yellow-400 mb-1">{stat.number}</div>
-                    <div className="text-sm text-gray-400">{stat.label}</div>
+            {/* Stats Grid */}
+            <div className="grid grid-cols-2 gap-6">
+              {[
+                { label: "Successful Projects", value: "15+", icon: Award },
+                { label: "Year of Experience", value: "1+", icon: Clock },
+              ].map((stat, i) => (
+                <div
+                  key={i}
+                  className="glass p-6 rounded-2xl hover:border-yellow-400/30 transition-colors group"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-foreground/5 flex items-center justify-center mb-4 group-hover:bg-yellow-400/10 transition-colors">
+                    <stat.icon className="w-5 h-5 text-yellow-400" />
                   </div>
-                ))}
-              </div>
+                  <div className="text-3xl font-black text-foreground mb-1">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm text-foreground/50 font-medium uppercase tracking-wider">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <a
-                  href="/cv.pdf"
-                  download
-                  className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-yellow-400 to-amber-500 text-black font-bold rounded-full hover:shadow-lg hover:shadow-yellow-400/25 transform hover:scale-105 transition-all duration-300"
-                >
-                  <Download className="w-5 h-5" />
-                  Download Resume
-                </a>
-                <a
-                  href="#contact"
-                  className="flex items-center justify-center gap-2 px-6 py-3 border-2 border-yellow-400 text-yellow-400 font-bold rounded-full hover:bg-yellow-400 hover:text-black transition-all duration-300"
-                >
-                  <Coffee className="w-5 h-5" />
-                  Let's Chat
-                </a>
-              </div>
+            {/* CTA's */}
+            <div className="flex flex-wrap gap-6">
+              <a
+                href="/cv.pdf"
+                download
+                className="px-8 py-4 bg-yellow-400 text-black font-black rounded-full hover:bg-foreground hover:text-background transition-all duration-300 flex items-center gap-2"
+              >
+                <Download size={20} />
+                Download CV
+              </a>
+              <a
+                href="#contact"
+                className="px-8 py-4 glass text-foreground font-bold rounded-full hover:bg-foreground/5 transition-all duration-300 flex items-center gap-2"
+              >
+                <Coffee size={20} className="text-yellow-400" />
+                Let's Connect
+              </a>
             </div>
           </div>
         </div>
-      </section>
-    </div>
-  )
+      </div>
+    </section>
+  );
 }
 
-export default AboutPage
+export default AboutPage;
