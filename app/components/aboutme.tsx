@@ -98,7 +98,7 @@ function AboutPage() {
             <div className="grid grid-cols-2 gap-6">
               {[
                 { label: "Successful Projects", value: "15+", icon: Award },
-                { label: "Year of Experience", value: "1+", icon: Clock },
+                { label: "Year of Experience", value: "2+", icon: Clock },
               ].map((stat, i) => (
                 <div
                   key={i}
